@@ -3,7 +3,8 @@ ESP32 Port of the airrohr particulates sensor. See http://luftdaten.info how to 
 
 ## Intro
 
-ESP32 Port of the airrohr firmware from luftdaten.info: https://github.com/opendata-stuttgart/sensors-software/airrohr-firmware
+ESP32 Port of the airrohr firmware from luftdaten.info:<br>
+https://github.com/opendata-stuttgart/sensors-software/tree/master/airrohr-firmware
 
 This Sketch was tested against a Heltec Wifi32 LoRa Module only. 
 
@@ -17,7 +18,8 @@ This Sketch was tested against a Heltec Wifi32 LoRa Module only.
 Use it on your own risk.
 
 ATTENTION: currently, the LoRa sending is just a first try, not standard conform, not
-optimized! for "production usage", please use WLAN.
+optimized!
+for "production usage", please use WLAN.
 
 
 
@@ -28,6 +30,7 @@ optimized! for "production usage", please use WLAN.
 * add more compile options for different sensors
 * code clean up
 * debug heap stack overflow for config webpages
+* debug "zero value" measurements
 
 ## Usage
 1. Connect the SDS011 to the PINs configured in the sketch (PIN 12 and 13 are preconfigured)
