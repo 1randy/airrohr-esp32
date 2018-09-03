@@ -4,6 +4,9 @@
 #if defined(ESP32)
 #define PIN_SDA 21
 #define PIN_SCL 22
+#define LED_BUILTIN 2
+#define LED_WARNING_PIN 23
+#define LED_ERROR_PIN 18
 #endif
 
 // Wifi config
@@ -145,8 +148,8 @@
 #define BME280_PIN_SDA D3
 #endif
 #if defined(ESP32)
-#define BME280_PIN_SCL 34
-#define BME280_PIN_SDA 35
+#define BME280_PIN_SCL PIN_SDA
+#define BME280_PIN_SDA PIN_SCL
 #endif
 
 // DS18B20, temperature
@@ -170,11 +173,11 @@
 #endif
 
 // GPS, fake location ohne GPS receiver
-#define GPS_FAKE 1
+#define GPS_FAKE 0
 // fake GPS coordinates munich
-#define GPS_FAKE_LAT "48.135"
-#define GPS_FAKE_LON "11.582"
-#define GPS_FAKE_ALT "500"
+#define GPS_FAKE_LAT "99.999"
+#define GPS_FAKE_LON "99.999"
+#define GPS_FAKE_ALT "666"
  
 // automatic firmware updates
 #define AUTO_UPDATE 0
@@ -186,7 +189,7 @@
 #define HAS_OLED_DISPLAY 0
 
 // OLED Display SSD1306 angeschlossen?
-#define HAS_DISPLAY 1
+#define HAS_DISPLAY 0
 
 // LCD Display LCD1602 angeschlossen?
 #define HAS_LCD1602 0
